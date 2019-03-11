@@ -2,11 +2,11 @@
 
 Private Repository for HW assignments of Stat 133 (Spring 2019)
 
-- Name: Your name (first last)
-- Github username: usrname
-- Email: address [at] email.com
-- Lab section: 101
-- GSI: Leia Organa
+- Name: Jaesung Lee
+- Github username: jaesung29
+- Email: jaesung29@berkeley.edu
+- Lab section: 107
+- GSI: 
 
 -----
 
@@ -16,5 +16,3 @@ Private Repository for HW assignments of Stat 133 (Spring 2019)
 - [Workout 1](workout1)
 - Workout 2
 - Workout 3
-
-
