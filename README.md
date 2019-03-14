@@ -6,7 +6,7 @@ Private Repository for HW assignments of Stat 133 (Spring 2019)
 - Github username: jaesung29
 - Email: jaesung29@berkeley.edu
 - Lab section: 107
-- GSI: 
+- GSI: Zishen Qian
 
 -----
 
