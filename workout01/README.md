@@ -8,8 +8,8 @@ The purpose of the assignment is as follows:
 3) Produce so-called "shot charts" for a handful of players from the Golden State Warriors(GSW), as well as other summaries and visualizations. 
 
 Folders description:
-data - contain the data files
-code - contain the R script files
-output - contain some R outputs
-images - contain some plot images
-report - contain the files for your dynamic document
+- data: contain the data files
+- code: contain the R script files
+- output: contain some R outputs
+- images: contain some plot images
+- report: contain the files for your dynamic document
