@@ -1,0 +1,12 @@
+name: Shiny_App
+title: Shiny_App
+username:
+account: jaesung29
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 868120
+bundleId: 2014733
+url: https://jaesung29.shinyapps.io/Shiny_App/
+when: 1555398550.13949
+asMultiple: FALSE
+asStatic: FALSE
