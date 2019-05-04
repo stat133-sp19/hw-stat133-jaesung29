@@ -1,0 +1,19 @@
+"0","# binomial random variable object with 5 trials and probability of success = 0.5"
+"0","bin_variable(trials = 5, prob = 0.3)"
+"1","'Binomial Variable'
+
+"
+"1","Parameters
+"
+"1","- number of trials:"
+"1"," "
+"1","5"
+"1"," "
+"1","
+"
+"1","- prob of success:"
+"1"," "
+"1","0.3"
+"1"," "
+"1","
+"

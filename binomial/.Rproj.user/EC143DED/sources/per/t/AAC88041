@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556946600509.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1678173184",
+    "id" : "AAC88041",
+    "lastKnownWriteTime" : 1556946783,
+    "last_content_update" : 1556947259352,
+    "path" : "C:/Users/jaesu/Downloads/hw-stat133/binomial/devtools-binomial.R",
+    "project_path" : "devtools-binomial.R",
+    "properties" : {
+        "cursorPosition" : "8,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -28,7 +28,6 @@ This package has been developed to illustrate some of the concepts behind the cr
 Install the development version from GitHub via the package "devtools":
 
 ## Development version from GitHub:
-install.packages("devtools") 
 ```{r}
 # development version from GitHub:
 #install.packages("devtools")
