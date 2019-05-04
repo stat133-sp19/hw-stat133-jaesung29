@@ -1,0 +1,80 @@
+# Workout 03: R Package binomial
+***
+
+## Overview
+***
+Binomial Package is a minimal R package that provides various calculations on binomial distribution.
+
+####Functions in this package include:
+
+##### Summary functions
+`summary()` computes summary of the binomial object
+`bin_mean()` computes mean of binomial distribution
+`bin_variance()` computes variance of a binomial distribution
+`bin_mode()` computes mode of a binomial distribution
+`bin_skewness()` computes skewness of a binomial distribution
+`bin_kurtosis()` computes kurtosis(tailedness) of a binomial distribution
+
+##### Main functions
+`bin_choose()` computes number of combinations of successes
+`bin_probability()` computes probability of successes
+`bin_distribution()` computes binomial probability distribution
+`bin_cumulative()` computes cumulative probabilities and binomial distribution
+`bin_variable()` returns an object of class, binomial random variable object
+`plot()` returns a barplot for bin_distribution and scatterplot with line for bin_cumulative
+
+## Motivation
+***
+This package has been developed to illustrate some of the concepts behind the creation of an R package.
+
+## Installation
+***
+Install the development version from GitHub via the package "devtools":
+
+# development version from GitHub:
+install.packages("devtools") 
+```{r}
+# development version from GitHub:
+#install.packages("devtools")
+
+# # install "binomial" (without vignettes)
+# devtools::install_github("stat133-sp19/hw-stat133-jaesung29/tree/master/binomial")
+
+# # install "binomial" (with vignettes)
+# devtools::install_github("stat133-sp19/hw-stat133-jaesung29/tree/master/binomial", build_vignettes = TRUE)
+```
+
+## Usage
+```{r}
+library(binomial)
+
+# mean or expected value of 10 trials and 0.3 probability of success
+bin_mean(10, 0.5)
+
+# variance of a binomial experiment with 10 trials and 0.3 probability of success
+bin_variance(10, 0.5)
+
+# mode(s) of a binomial experiment with 10 trials and 0.3 probability of success
+bin_mode(10, 0.3)
+
+# skewness of a binomial experiment with 10 trials and 0.3 probability of success
+bin_skewness(10, 0.3)
+
+# kurtosis of a binomial experiment with 10 trials and 0.3 probability of success
+bin_kurtosis(10, 0.3)
+
+# number of combinations of successes with 5 trials and 3 sucesses
+bin_choose(5, 3)
+
+# probability of successes with 3 sucesses, 5 trials and probability of success = 0.5
+bin_probability(success = 5, trials = 5, prob = 0.5)
+
+# binomial distribution with 5 trials and probability of success = 0.5
+bin_distribution(trials = 5, prob = 0.5)
+
+# binomial cumulative distribution with 5 trials and probability of success = 0.5
+bin_cumulative(trials = 5, prob = 0.5)
+
+# binomial random variable object with 5 trials and probability of success = 0.5
+bin_variable(trials = 5, prob = 0.3)
+```

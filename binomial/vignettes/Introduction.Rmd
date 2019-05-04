@@ -1,0 +1,60 @@
+---
+title: "Introduction"
+author: "Jaesung Lee"
+date: "05-03-2019"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(collapse = T, comment = "#>")
+
+library(binomial)
+```
+
+## Binomial distribution functions
+The package provides various calculations on binomial distribution.
+
+## bin_choose() computes the number of combinations in which k successes can occur in n trials
+```{r}
+bin_choose(n = 5, k = 3)
+```
+
+## bin_probability() computes the probability of getting the number of successes in trials with a probability of success on each trial
+```{r}
+
+```
+
+
+# mean or expected value of 10 trials and 0.3 probability of success
+bin_mean(10, 0.5)
+
+# variance of a binomial experiment with 10 trials and 0.3 probability of success
+bin_variance(10, 0.5)
+
+# mode(s) of a binomial experiment with 10 trials and 0.3 probability of success
+bin_mode(10, 0.3)
+
+# skewness of a binomial experiment with 10 trials and 0.3 probability of success
+bin_skewness(10, 0.3)
+
+# kurtosis of a binomial experiment with 10 trials and 0.3 probability of success
+bin_kurtosis(10, 0.3)
+
+# number of combinations of successes with 5 trials and 3 sucesses
+bin_choose(5, 3)
+
+# probability of successes with 3 sucesses, 5 trials and probability of success = 0.5
+bin_probability(success = 5, trials = 5, prob = 0.5)
+
+# binomial distribution with 5 trials and probability of success = 0.5
+bin_distribution(trials = 5, prob = 0.5)
+
+# binomial cumulative distribution with 5 trials and probability of success = 0.5
+bin_cumulative(trials = 5, prob = 0.5)
+
+# binomial random variable object with 5 trials and probability of success = 0.5
+bin_variable(trials = 5, prob = 0.3)
