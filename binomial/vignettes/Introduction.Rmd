@@ -23,38 +23,61 @@ The package provides various calculations on binomial distribution.
 bin_choose(n = 5, k = 3)
 ```
 
-## bin_probability() computes the probability of getting the number of successes in trials with a probability of success on each trial
+## bin_probability() computes the probability of getting the number of successes on each trial
 ```{r}
+bin_probability(success = 5, trials = 5, prob = 0.5)
+```
 
+## bin_distribution() computes the probability distribution for each outcome
+```{r}
+bin_distribution(trials = 5, prob = 0.5)
+```
+
+## `plot()` is used to create a visual graphics for bin_distribution()
+```{r}
+plot(bin_distribution(trials = 5, prob = 0.5))
+```
+
+## bin_cumulative() is used to add cumulative probability in addition to the bin_distribution table
+```{r}
+bin_cumulative(trials = 5, prob = 0.5)
+```
+
+## `plot()` is used to create a visual graphics for bin_cumulative()
+```{r}
+plot(bin_cumulative(trials = 5, prob = 0.5))
+```
+
+## mean or expected value of the binomial distribution
+```{r}
+bin_mean(10, 0.2)
+```
+
+## vaiance of the binomial distribution
+```{r}
+bin_variance(10, 0.2)
+```
+
+## mode of the binomial distribution
+```{r}
+bin_mode(10, 0.2)
+```
+
+## skewness of the binomial distribution
+```{r}
+bin_skewness(10, 0.2)
+```
+
+## kurtosis of the binomial distribution
+```{r}
+bin_kurtosis(10, 0.2)
+```
+
+## summary of the binomial distribution
+```{r}
+bin1 <- bin_variable(trials = 10, p = 0.3)
+binsum1 <- summary(bin1)
+binsum1
 ```
 
 
-# mean or expected value of 10 trials and 0.3 probability of success
-bin_mean(10, 0.5)
-
-# variance of a binomial experiment with 10 trials and 0.3 probability of success
-bin_variance(10, 0.5)
-
-# mode(s) of a binomial experiment with 10 trials and 0.3 probability of success
-bin_mode(10, 0.3)
-
-# skewness of a binomial experiment with 10 trials and 0.3 probability of success
-bin_skewness(10, 0.3)
-
-# kurtosis of a binomial experiment with 10 trials and 0.3 probability of success
-bin_kurtosis(10, 0.3)
-
-# number of combinations of successes with 5 trials and 3 sucesses
-bin_choose(5, 3)
-
-# probability of successes with 3 sucesses, 5 trials and probability of success = 0.5
-bin_probability(success = 5, trials = 5, prob = 0.5)
-
-# binomial distribution with 5 trials and probability of success = 0.5
-bin_distribution(trials = 5, prob = 0.5)
-
-# binomial cumulative distribution with 5 trials and probability of success = 0.5
-bin_cumulative(trials = 5, prob = 0.5)
-
-# binomial random variable object with 5 trials and probability of success = 0.5
-bin_variable(trials = 5, prob = 0.3)

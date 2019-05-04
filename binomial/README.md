@@ -2,12 +2,11 @@
 ***
 
 ## Overview
-***
 Binomial Package is a minimal R package that provides various calculations on binomial distribution.
 
-####Functions in this package include:
+### Functions in this package include:
 
-##### Summary functions
+#### Summary functions
 `summary()` computes summary of the binomial object
 `bin_mean()` computes mean of binomial distribution
 `bin_variance()` computes variance of a binomial distribution
@@ -15,7 +14,7 @@ Binomial Package is a minimal R package that provides various calculations on bi
 `bin_skewness()` computes skewness of a binomial distribution
 `bin_kurtosis()` computes kurtosis(tailedness) of a binomial distribution
 
-##### Main functions
+#### Main functions
 `bin_choose()` computes number of combinations of successes
 `bin_probability()` computes probability of successes
 `bin_distribution()` computes binomial probability distribution
@@ -24,14 +23,12 @@ Binomial Package is a minimal R package that provides various calculations on bi
 `plot()` returns a barplot for bin_distribution and scatterplot with line for bin_cumulative
 
 ## Motivation
-***
 This package has been developed to illustrate some of the concepts behind the creation of an R package.
 
 ## Installation
-***
 Install the development version from GitHub via the package "devtools":
 
-# development version from GitHub:
+## Development version from GitHub:
 install.packages("devtools") 
 ```{r}
 # development version from GitHub:

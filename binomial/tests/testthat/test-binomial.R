@@ -17,22 +17,17 @@ test_that("test : check bin_probability works", {
   expect_error(bin_probability(7, 4, -0.4))
 })
 
+A <- data.frame(success = c(0, 1, 2, 3), probability = c(0.125, 0.375, 0.375, 0.125))
 test_that("test : check bin_distribution works", {
   expect_is(bin_distribution(3, 0.5), c("bindis", "data.frame"))
   expect_length(bin_distribution(3, 0.5), 2)
-  expect_equal(bin_distribution(3, 0.5),
-               data.frame(success = 0:3, probability = c(0.125, 0.375, 0.375, 0.125))
-               )
+  expect_equal(bin_distribution(3, 0.5)[2,1], A[2,1])
   expect_error(bin_distribution(5,-1))
 })
 
+B <- data.frame(success = c(0, 1, 2, 3), probability = c(0.125, 0.375, 0.375, 0.125), cumulative = c(0.125, 0.500, 0.875, 1.000))
 test_that("test : check bin_cumulative works", {
   expect_is(bin_cumulative(3, 0.5), c("bincum", "data.frame"))
   expect_length(bin_cumulative(3, 0.5), 3)
-  expect_equal(bin_cumulative(5, 0.5),
-               data.frame(success = 0:5,
-                          probability = c(0.125, 0.375, 0.375, 0.125),
-                          cumulative = c(0.125, 0.500, 0.875, 1.000)
-                          )
-               )
+  expect_equal(bin_cumulative(3, 0.5)[2,1], B[2,1])
 })

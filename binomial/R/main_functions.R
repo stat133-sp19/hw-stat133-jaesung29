@@ -49,6 +49,8 @@ bin_probability <- function(success, trials, prob) {
 #' bin_distribution(trials = 5, prob = 0.5)
 #' bin_distribution(7, 0.4)
 bin_distribution <- function(trials, prob){
+  check_trials(trials)
+  check_prob(prob)
   successes <- 0:trials
   probdist <- bin_probability(successes, trials, prob)
   df <- data.frame("success" = successes, "probability" = probdist)
@@ -106,21 +108,22 @@ print.binvar <- function(x, ...) {
   cat("'Binomial Variable'\n\n")
   cat("Parameters\n")
   cat("- number of trials:", x[[1]], "\n")
-  cat("- prob of success:", x[[2]], "\n")
+  cat("- prob of success :", x[[2]], "\n")
 }
 
 
 #' @export
 summary.binvar <- function(x, ...) {
-  result <- list(trials = x$trials,
-                 prob = x$prob,
-                 mean = aux_mean(x$trials, x$prob),
-                 variance = aux_variance(x$trials, x$prob),
-                 mode = aux_mode(x$trials, x$prob),
-                 skewness = aux_skewness(x$trials, x$prob),
-                 kurtosis = aux_kurtosis(x$trials, x$prob))
-  class(result) <- "summary.binvar"
-  return(result)
+  trials <- x[[1]]
+  prob <- x[[2]]
+  mean <- aux_mean(x[[1]], x[[2]])
+  variance <- aux_variance(x[[1]], x[[2]])
+  mode <- aux_mode(x[[1]], x[[2]])
+  skewness <- aux_skewness(x[[1]], x[[2]])
+  kurtosis <- aux_kurtosis(x[[1]], x[[2]])
+  list <- list(trials, prob, mean, variance, mode, skewness, kurtosis)
+  class(list) <- c("summary.binvar")
+  return(list)
 }
 
 
@@ -129,15 +132,15 @@ print.summary.binvar <- function(x, ...) {
   strings <- c('"Summary Binomial"',
                "",
                "Parameters",
-               paste("- number of trials:", x$trials),
-               paste("- prob of success :", x$prob),
+               paste("- number of trials:", x[[1]]),
+               paste("- prob of success :", x[[2]]),
                "",
                "Measures",
-               paste("- mean    :", x$mean),
-               paste("- variance:", x$variance),
-               paste("- mode    :", x$mode),
-               paste("- skewness:", x$skewness),
-               paste("- kurtosis:", x$kurtosis))
+               paste("- mean    :", x[[3]]),
+               paste("- variance:", x[[4]]),
+               paste("- mode    :", x[[5]]),
+               paste("- skewness:", x[[6]]),
+               paste("- kurtosis:", x[[7]]))
   for (s in strings) {
     print(noquote(s))
   }

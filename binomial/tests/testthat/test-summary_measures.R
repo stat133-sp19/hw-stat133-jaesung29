@@ -14,7 +14,7 @@ test_that("test : check aux_variance works", {
 
 test_that("test : check aux_mode works", {
   expect_equal(aux_mode(20, 0.5), 10)
-  expect_length(aux_mode(10, 0.5), 5)
+  expect_length(aux_mode(10, 0.5), 1)
   expect_length(aux_mode(20, 0.5), 1)
 })
 
